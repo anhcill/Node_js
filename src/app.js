@@ -24,7 +24,7 @@ app.get("/", (req, res, next) => {
   });
 });
 // init db
-
+require("./db/init.mongodb");
 // init routes
 
 module.exports = app;
