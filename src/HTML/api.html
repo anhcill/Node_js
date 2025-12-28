@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API - Nhận Email</title>
+  </head>
+  <body>
+    <h1>Thông tin nhận được:</h1>
+    <div id="result"></div>
+
+    <script>
+      // Đọc email từ URL params
+      const urlParams = new URLSearchParams(window.location.search);
+      const email = urlParams.get('email');
+      
+      // Hiển thị email
+      const resultDiv = document.getElementById('result');
+      if (email) {
+        resultDiv.innerHTML = `<p>Email nhận được: <strong>${email}</strong></p>`;
+      } else {
+        resultDiv.innerHTML = '<p style="color: red;">Không nhận được email!</p>';
+      }
+    </script>
+  </body>
+</html>
